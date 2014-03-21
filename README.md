@@ -15,7 +15,7 @@ docker run -d --name gitalist -v /host/projects:/r -e GITALIST_REPO_DIR=/r jmmil
 Run as a fastcgi
 ================
 ```
-docker run -d --name=gitalist -e GITALIST_CONFIG=/projects/gitalist.conf -v /projects/gitalist/:/projects jmmills/gitalist gitalist_fastcgi -listen 0.0.0.0:3000
+docker run -d --name=gitalist -e GITALIST_REPO_DIR=/r -v /projects/r/:/r jmmills/gitalist gitalist_fastcgi -listen 0.0.0.0:3000
 ```
 
 Et voila!
