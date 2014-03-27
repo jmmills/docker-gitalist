@@ -7,7 +7,7 @@ RUN apt-get install -y libfcgi-procmanager-perl
 RUN apt-get install -y build-essential
 RUN apt-get install -y git
 ADD install_gitalist_apt_deps.sh /tmp/install_gitalist_apt_deps.sh
-RUN /tmp/install_gitalist_apt_deps.sh
+RUN /bin/sh /tmp/install_gitalist_apt_deps.sh
 RUN cpanm -n Gitalist
 RUN rm -v /tmp/install_gitalist_apt_deps.sh
 
